@@ -10,7 +10,7 @@ function createStudent() {
 
 	while (true) {
 
-		// 登録済のフォルダを排除する為に順に比較していく
+		// A 列の先頭から順に取得して、空白になったら終了
 		var targetRange = spreadsheet.getRange('A' + i);
 		var cellWork = targetRange.getValue().toString();
 		if (cellWork != '') {
